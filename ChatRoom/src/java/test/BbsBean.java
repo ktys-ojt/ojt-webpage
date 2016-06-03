@@ -5,7 +5,7 @@ package test;
  */
 public class BbsBean {
     private String name;
-    private String sex;
+    private String dateTime;
     private String comment;
 
     public String getName() {
@@ -16,12 +16,12 @@ public class BbsBean {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getDateTime() {
+        return dateTime;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
     public String getComment() {

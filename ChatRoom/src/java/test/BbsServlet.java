@@ -6,8 +6,12 @@
 package test;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.util.converter.LocalDateTimeStringConverter;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -42,27 +46,15 @@ public class BbsServlet extends HttpServlet {
         List<ErrorBean> errorList = new ArrayList<>();
 
         String name = request.getParameter("name");
-        String sex = request.getParameter("sex");
         String comment = request.getParameter("comment");
+        String dateTimeFormat = "yyyy/MM/dd HH:mm:ss";
 
         errorCheck("name", name, bean, errorList);
         bean.setName(name);
-        errorCheck("sex", sex, bean, errorList);
-        bean.setSex(sex);
+        LocalDateTime dateTime = LocalDateTime.now();
+        bean.setDateTime(dateTime.format(DateTimeFormatter.ofPattern(dateTimeFormat)));
         errorCheck("comment", comment, bean, errorList);
         bean.setComment(comment);
-
-/*
-        if (name == null || name.isEmpty()) {
-            name = "未入力です。入力してください。";
-            ErrorBean error = new ErrorBean();
-            error.setItem(name);
-            error.setMessage(name);
-            errorList.add(error);
-        } else {
-            bean.setName(name);
-        }
-*/
 
         if (errorList.isEmpty()) {
             messageList.add(bean);
