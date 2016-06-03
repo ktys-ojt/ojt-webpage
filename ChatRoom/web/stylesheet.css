@@ -1,25 +1,28 @@
 body {
-    background-color: burlywood;
+    //background-color: #303030;
+    //background-color: burlywood;
+    background-image: url(Desert.jpg);
 }
 
 .header {
     height: 70px;
     width: 1000px;
     margin-bottom: 20px;
-    background-color: gray;
+    border-bottom: 2px solid black;
 }
 
 .chat-room {
     float: left;
     padding: 20px 60px;
-    color: white;
+    color: yellowgreen;//#ED7000;
     font-size: 35px;
 }
 
 .chat-title {
     padding: 25px 65px;
     float: right;
-    color: orange;
+    //color: black;
+    color: wheat;
     font-size: 25px;
 }
 
@@ -28,17 +31,23 @@ body {
 }
 
 .chat {
-    width: 600px;
+    width: 650px;
     float: left;
-    padding: 30px;
+    padding: 30px 30px 30px 45px;
+    //background-color: white;
+    margin-right: 0px;
+    color: black;
 }
 
 .get-message th {
     width: 100px;
     border: 1px solid gray;
+    background-color: white
 }
 
 .message{
+    padding: 10px;
+    background-color: white;
     margin-bottom: 20px;
 }
 
@@ -59,7 +68,10 @@ body {
     width: 200px;
     float: right;
     padding: 30px;
-    background-color: white;
+    //background-color: #D0D0D0;
+    background-color: #505050;
+    border: 2px solid black;
+    color: white;
 }
 
 .chat-list {
@@ -67,6 +79,6 @@ body {
 }
 
 .chat-list li {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 5px;
 }

@@ -35,7 +35,7 @@
                 </form>
             </div>
             <div class="sidebar">
-                <h2>スレッド一覧</h2>
+                <h2>チャット一覧</h2>
                 <ul class="chat-list">
                     <li>xxx</li>
                     <li>yyy</li>
@@ -48,6 +48,7 @@
                 </ul>
             </div>
         </div>
-        <script src="jQuery.js"></script>
+        <script src="script.js"></script>
+
     </body>
 </html>
