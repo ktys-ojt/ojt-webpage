@@ -34,9 +34,10 @@ body {
     width: 650px;
     float: left;
     padding: 30px 30px 30px 45px;
-    //background-color: white;
+    background-color: skyblue;
     margin-right: 0px;
     color: black;
+    border: 2px solid blue;
 }
 
 .get-message th {
