@@ -8,12 +8,10 @@
             i++;
             %>
             <div class="message">
-            <%
-            out.println(i + " : " + bean.getName());
-            out.println(" : " + bean.getDateTime() + "<br>");
-            out.println(" " + bean.getComment());
-            %>
-                    </tr>
+                <%=i + " : "%>
+                <span class="name"><%= bean.getName() %></span>
+                <%= " : " + bean.getDateTime() + "<br>" %>
+                <span class="comment"><%= bean.getComment() %></span>
                 </table>
             </div>
             <%
