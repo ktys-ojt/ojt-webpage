@@ -1,15 +1,15 @@
-<%@page contentType="text/html" pageEncoding="Shift_JIS"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ƒjƒRƒjƒRŒfŽ¦”Â</title>
+        <title>ãƒ‹ã‚³ãƒ‹ã‚³æŽ²ç¤ºæ¿</title>
         <link rel="stylesheet" href="stylesheet.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
         <div class="header">
-            <div class="chat-room">TRPG‚â‚ë‚¤‚¸</div>
-            <div class="chat-title">ƒjƒRƒjƒRŒfŽ¦”Â</div>
+            <div class="chat-room">TRPGã‚„ã‚ã†ãš</div>
+            <div class="chat-title">ãƒ‹ã‚³ãƒ‹ã‚³æŽ²ç¤ºæ¿</div>
         </div>
         
         <div class="main">
@@ -18,33 +18,33 @@
                 <jsp:include page="error.jsp"></jsp:include>
                 <jsp:include page="disp.jsp"></jsp:include>
 
-                <%-- “ü—ÍƒtƒH[ƒ€ --%>
+                <%-- å…¥åŠ›ãƒ•ã‚©ãƒ¼ãƒ  --%>
                 <form action="<%=request.getContextPath()%>/test.BbsServlet" method="post">
                     <table class="get-message">
                         <tr>
-                            <th>ƒjƒbƒNƒl[ƒ€</th>
+                            <th>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ </th>
                             <td><input type="text" name="name"></td>
                         </tr>
                         <tr>
-                            <th>ƒƒbƒZ[ƒW</th>
+                            <th>ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸</th>
                             <td><input type="text" name="comment"></td>
                         </tr>
                     </table>
-                    <input type="submit" value="”­Œ¾">
-                    <input type="reset" value="ŽæÁ">
+                    <input type="submit" value="ç™ºè¨€">
+                    <input type="reset" value="å–æ¶ˆ">
                 </form>
             </div>
             <div class="sidebar">
-                <h2>ƒ`ƒƒƒbƒgˆê——</h2>
+                <h2>ãƒãƒ£ãƒƒãƒˆä¸€è¦§</h2>
                 <ul class="chat-list">
                     <li>xxx</li>
                     <li>yyy</li>
                     <li>zzz</li>
                     <li>aaa</li>
                     <li>xxxyyyzzz</li>
-                    <li>TRPG‚â‚ë‚¤‚¸</li>
-                    <li>CoC‚ªŽŠ‚</li>
-                    <li>¡‹G‚Ìƒ_[ƒNƒz[ƒX~ƒrƒMƒjƒ“ƒOƒAƒCƒhƒ‹~</li>
+                    <li><a href="input.jsp">TRPGã‚„ã‚ã†ãš</a></li>
+                    <li>CoCãŒè‡³é«˜</li>
+                    <li>ä»Šå­£ã®ãƒ€ãƒ¼ã‚¯ãƒ›ãƒ¼ã‚¹~ãƒ“ã‚®ãƒ‹ãƒ³ã‚°ã‚¢ã‚¤ãƒ‰ãƒ«~</li>
                 </ul>
             </div>
         </div>
