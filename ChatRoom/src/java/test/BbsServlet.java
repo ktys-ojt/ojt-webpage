@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.util.converter.LocalDateTimeStringConverter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -52,7 +51,8 @@ public class BbsServlet extends HttpServlet {
         errorCheck("name", name, bean, errorList);
         bean.setName(name);
         LocalDateTime dateTime = LocalDateTime.now();
-        bean.setDateTime(dateTime.format(DateTimeFormatter.ofPattern(dateTimeFormat)));
+        bean.setDateTime(dateTime.
+                format(DateTimeFormatter.ofPattern(dateTimeFormat)));
         errorCheck("comment", comment, bean, errorList);
         bean.setComment(comment);
 
