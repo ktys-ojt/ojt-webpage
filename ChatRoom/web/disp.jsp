@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="Shift_JIS"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="test.BbsBean, java.util.List"%>
 <%
     List<BbsBean> beans = (List<BbsBean>) getServletContext().getAttribute("beans");
@@ -16,5 +16,14 @@
             </div>
             <%
         }
+    } else {
+        %>
+        <div class="message">
+            0 : <span class="name">名無しのGM</span>
+             : 0000/00/00 00:00:00<br>
+            <span class="comment">この掲示板にはまだコメントがありません</span>
+            </table>
+        </div>
+        <%
     }
 %>
