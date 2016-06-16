@@ -7,13 +7,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </head>
     <body>
-        <div class="header">
+        <div class="header border-circle">
             <div class="header-main">TRPGやろうず</div>
             <div class="header-sub">NikoNiko掲示板</div>
         </div>
         
         <div class="main">
-            <div class="sidebar Bcolor-white">
+            <div class="sidebar Bcolor-white border-circle">
                 <h2>チャット一覧</h2>
                 <ul class="chat-list">
                     <li>xxx</li>
@@ -27,7 +27,7 @@
                 </ul>
             </div>
 
-            <div class="chat Bcolor-white">
+            <div class="chat Bcolor-white border-circle">
                 <jsp:include page="error.jsp"></jsp:include>
                 <jsp:include page="disp.jsp"></jsp:include>
                 <%-- 入力フォーム --%>
