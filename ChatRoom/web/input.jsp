@@ -32,19 +32,19 @@
                 <jsp:include page="disp.jsp"></jsp:include>
                 <%-- 入力フォーム --%>
                 <form action="<%=request.getContextPath()%>/test.BbsServlet" method="post">
-                    <table class="get-message">
+                    <table class="Bcolor-white">
                         <tr>
-                            <th>ニックネーム</th>
+                            <th>ニックネーム:</th>
                             <td><input type="text" name="name"></td>
+                            <td><input type="submit" value="発言" class="btn"></td>
+                            <td><input type="reset" value="取消" class="btn"></td>
                         </tr>
                         <tr>
-                            <th>コメント</th>
-                            <td><input type="text" name="comment"></td>
+                            <th>コメント:</th>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="submit" value="発言" class="btn">
-                                <input type="reset" value="取消" class="btn">
+                            <td colspan="4">
+                                <textarea name="comment" cols="48" rows="4"></textarea>
                             </td>
                         </tr>
                     </table>
