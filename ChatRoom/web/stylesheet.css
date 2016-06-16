@@ -3,34 +3,45 @@ html,body {
     margin: 0px;
     word-wrap: break-word;
 }
+
+li {
+    list-style: none;
+}
 /* -------------------------------------- */
 /* background-color style start
 /* -------------------------------------- */
 body {
-    //background: radial-gradient(#E0FFFF,#00CED1);
-    background-color: #991122;
+    background-color: #0076be;
 }
 
-.header {
-    background-color: #000000;
+.main {
+    background-color: #fcfcfc;
 }
 
 .Bcolor-white {
-    background-color: #f9f9f9;    
+    background-color: #f9f9f9;
+    border-top: 10px solid #052e68;
+    border-bottom: 10px solid #052e68;
+    border-left: 10px solid #0076be;
+    border-right: 10px solid #0076be;
 }
-/* -------------------------------------- */
+ /* -------------------------------------- */
 /* background-color style end
 /* -------------------------------------- */
 
 /* -------------------------------------- */
 /* font style start
 /* -------------------------------------- */
+.message {
+    font-weight: bold;
+}
+
 .blue {
-    color: blue;
+    color: #0000CD;
 }
 
 .border-circle {
-    border-radius: 14px;
+    //border-radius: 14px;
 }
 
 .attention {
@@ -40,21 +51,30 @@ body {
 }
 
 .header {
-    font-family: cursive;
+    //font-family: cursive;
 }
 
 .header-main {
-    color: orange;
-    font-size: 35px;
+    color: #fcfcfc;
+    font-size: 40px;
+    font-weight: bolder;
 }
 
 .header-sub {
-    color: wheat;
-    font-size: 25px;
+    color: #fcfcfc;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.chat {
-    color: black;
+.error {
+    margin-bottom: 30px;
+    color: red;
+}
+
+.chat-list li {
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 1px dotted black;
 }
 /* -------------------------------------- */
 /* font style end
@@ -62,30 +82,31 @@ body {
 
 .header {
     height: 70px;
-    position: fixed;
-    top: 10px;
-    left: 1%;
     width: 98%;//left + width = 100% になるようにする
+    margin: 0px auto;
 }
 
 .header-main {
     float: left;
-    padding: 10px 10px 10px 5%;
+    padding: 25px 10px 0px 5%;
 }
 
 .header-sub {
     float: right;
-    padding: 15px 10% 10px 10px;
+    padding: 35px 10% 0px 10px;
 }
 
 .main {
+    min-height: 800px;
     max-width: 1000px;
-    width: 100%;
-    margin: 90px auto 30px auto;
+    width: 96%;
+    margin: 20px auto 30px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .chat {
-    width: 65%;
+    width: 60%;
     float: right;
     padding: 30px 5%;
     margin-right: 2%;
@@ -94,11 +115,6 @@ body {
 .message{
     padding: 10px;
     margin-bottom: 10px;
-}
-
-.error {
-    margin-bottom: 30px;
-    color: red;
 }
 
 .sidebar {
@@ -120,27 +136,20 @@ table {
     clear: both;
 }
 
-.chat-list li {
-    list-style: none;
-    font-size: 15px;
-    padding: 5px;
-    border-bottom: 1px dotted black;
-}
-
 @media (max-width: 600px) {
     .header-main {
-        font-size: 25px;
-        padding: 15px 15px 10px 5%;
+        font-size: 35px;
+        padding: 35px 15px 10px 5%;
     }
     .header-sub {
-        font-size: 20px;
-        padding: 20px 10% 10px 10px;
+        font-size: 25px;
+        padding: 40px 10% 10px 10px;
     }
     .sidebar {
         display: none;
     }
     .chat {
-        width: 85%;
+        width: 80%;
         float: inherit;
         margin-right: auto;
         margin-left: auto;
