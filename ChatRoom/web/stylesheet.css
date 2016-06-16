@@ -1,15 +1,15 @@
+html,body {
+    width: 100%;
+    margin: 0px;
+    word-wrap: break-word;
+}
+
 /* -------------------------------------- */
 /* background-color style start
 /* -------------------------------------- */
 body {
     background-color: #00ced1;
-        background: radial-gradient(#E0FFFF,#00CED1);
-
-}
-
-.main {
     background: radial-gradient(#E0FFFF,#00CED1);
-    background-repeat: no-repeat;
 }
 
 .header {
@@ -17,14 +17,9 @@ body {
 }
 
 .Bcolor-white {
-    background-color: white;
-    
+    background-color: #f9f9f9;    
 }
-/*
-.chat {    background-color: white;}
-.sidebar {    background-color: white;}
-.message {    background-color: white;}
-*/
+
 /* -------------------------------------- */
 /* background-color style end
 /* -------------------------------------- */
@@ -44,7 +39,6 @@ body {
 }
 
 .header {
-    font-family: cursive;
 }
 
 .header-main {
@@ -66,13 +60,14 @@ body {
 
 .header {
     height: 70px;
-    width: 90%;
+    width: 98%;
+    font-family: cursive;
     border-radius: 14px;
-//    border-bottom-right-radius: 14px;
-  //  border-bottom-left-radius: 14px;
+    //border-bottom-right-radius: 14px;
+    //border-bottom-left-radius: 14px;
     position: fixed;
     top: 10px;
-    left: 5%;
+    left: 1%;
 }
 
 .header-main {
@@ -87,26 +82,22 @@ body {
 
 .main {
     max-width: 1000px;
-    margin: 70px 0px 30px 0px;
-    padding: 20px 5%;
+    width: 100%;
+    margin: 90px auto 30px auto;
 }
 
 .chat {
-    width: 64%;
+    width: 65%;
     float: right;
     padding: 30px 5%;
     border-radius: 14px;
-}
-
-.get-message th {
-    width: 100px;
-    border: 1px solid gray;
-    background-color: white
+    margin-right: 2%;
 }
 
 .message{
     padding: 10px;
     margin-bottom: 20px;
+    border: 1px solid black;
 }
 
 .error {
@@ -118,8 +109,9 @@ body {
     height: 600px;
     width: 15%;
     float: left;
-    padding: 20px;
+    padding: 2%;
     border-radius: 14px;
+    margin-left: 2%;
 }
 
 .chat-list {
@@ -141,18 +133,26 @@ table {
     border-bottom: 1px dotted black;
 }
 
-.btn {
-    width: 50%;
-    float: left;
-}
-
 @media (max-width: 600px) {
+    .header-main {
+        font-size: 25px;
+        padding: 15px 15px 10px 5%;
+    }
+
+    .header-sub {
+        font-size: 20px;
+        padding: 20px 10% 10px 10px;
+    }
+
     .sidebar {
         display: none;
     }
 
     .chat {
-        width: 90%;
+        width: 85%;
+        float: inherit;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
