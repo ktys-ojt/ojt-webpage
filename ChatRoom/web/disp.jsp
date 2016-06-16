@@ -7,7 +7,7 @@
         for(BbsBean bean: beans){
             i++;
             %>
-            <div class="message Bcolor-white">
+            <div class="message">
                 <%=i + " : "%>
                 <span class="blue"><%= bean.getName() %></span>
                 <%= " : " + bean.getDateTime() + "<br>" %>

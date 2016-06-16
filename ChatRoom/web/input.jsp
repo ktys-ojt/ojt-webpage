@@ -32,7 +32,7 @@
                 <jsp:include page="disp.jsp"></jsp:include>
                 <%-- 入力フォーム --%>
                 <form action="<%=request.getContextPath()%>/test.BbsServlet" method="post">
-                    <table class="Bcolor-white">
+                    <table>
                         <tr>
                             <th>ニックネーム:</th>
                             <td><input type="text" name="name"></td>
