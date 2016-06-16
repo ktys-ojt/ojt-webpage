@@ -3,12 +3,10 @@ html,body {
     margin: 0px;
     word-wrap: break-word;
 }
-
 /* -------------------------------------- */
 /* background-color style start
 /* -------------------------------------- */
 body {
-    background-color: #00ced1;
     background: radial-gradient(#E0FFFF,#00CED1);
 }
 
@@ -19,7 +17,6 @@ body {
 .Bcolor-white {
     background-color: #f9f9f9;    
 }
-
 /* -------------------------------------- */
 /* background-color style end
 /* -------------------------------------- */
@@ -27,7 +24,6 @@ body {
 /* -------------------------------------- */
 /* font style start
 /* -------------------------------------- */
-
 .blue {
     color: blue;
 }
@@ -39,6 +35,7 @@ body {
 }
 
 .header {
+    font-family: cursive;
 }
 
 .header-main {
@@ -55,19 +52,16 @@ body {
     color: black;
 }
 /* -------------------------------------- */
-/* font style start
+/* font style end
 /* -------------------------------------- */
 
 .header {
     height: 70px;
-    width: 98%;
-    font-family: cursive;
     border-radius: 14px;
-    //border-bottom-right-radius: 14px;
-    //border-bottom-left-radius: 14px;
     position: fixed;
     top: 10px;
     left: 1%;
+    width: 98%;//left + width = 100% になるようにする
 }
 
 .header-main {
@@ -96,8 +90,7 @@ body {
 
 .message{
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .error {
@@ -138,26 +131,17 @@ table {
         font-size: 25px;
         padding: 15px 15px 10px 5%;
     }
-
     .header-sub {
         font-size: 20px;
         padding: 20px 10% 10px 10px;
     }
-
     .sidebar {
         display: none;
     }
-
     .chat {
         width: 85%;
         float: inherit;
         margin-right: auto;
         margin-left: auto;
-    }
-}
-
-@media (max-width: 942px) {
-    .sidebar h2 {
-        width: 100px;
     }
 }
