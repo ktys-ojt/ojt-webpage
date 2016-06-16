@@ -7,11 +7,11 @@
         for(BbsBean bean: beans){
             i++;
             %>
-            <div class="message">
+            <div class="message Bcolor-white">
                 <%=i + " : "%>
-                <span class="name"><%= bean.getName() %></span>
+                <span class="blue"><%= bean.getName() %></span>
                 <%= " : " + bean.getDateTime() + "<br>" %>
-                <span class="comment"><%= bean.getComment() %></span>
+                <span><%= bean.getComment() %></span>
                 </table>
             </div>
             <%
@@ -19,9 +19,9 @@
     } else {
         %>
         <div class="message">
-            0 : <span class="name">名無しのGM</span>
+            0 : <span class="blue">名無しのGM</span>
              : 0000/00/00 00:00:00<br>
-            <span class="comment">この掲示板にはまだコメントがありません</span>
+            <span class="attention">この掲示板にはまだコメントがありません</span>
             </table>
         </div>
         <%

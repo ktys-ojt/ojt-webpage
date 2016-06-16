@@ -1,52 +1,101 @@
+/* -------------------------------------- */
+/* background-color style start
+/* -------------------------------------- */
 body {
-    //background-color: #303030;
-    //background-color: burlywood;
-    background-image: url(Desert.jpg);
+    background-color: #00ced1;
+        background: radial-gradient(#E0FFFF,#00CED1);
+
 }
 
-.name {
+.main {
+    background: radial-gradient(#E0FFFF,#00CED1);
+    background-repeat: no-repeat;
+}
+
+.header {
+    background-color: #008000;
+}
+
+.Bcolor-white {
+    background-color: white;
+    
+}
+/*
+.chat {    background-color: white;}
+.sidebar {    background-color: white;}
+.message {    background-color: white;}
+*/
+/* -------------------------------------- */
+/* background-color style end
+/* -------------------------------------- */
+
+/* -------------------------------------- */
+/* font style start
+/* -------------------------------------- */
+
+.blue {
     color: blue;
 }
 
-.comment {
+.attention {
+    color: red;
+    font-weight: bold;
     font-size: 20px;
 }
 
 .header {
-    height: 70px;
-    width: 1000px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid black;
+    font-family: cursive;
 }
 
-.chat-room {
-    float: left;
-    padding: 20px 60px;
-    color: yellowgreen;
+.header-main {
+    color: orange;
     font-size: 35px;
 }
 
-.chat-title {
-    padding: 25px 65px;
-    float: right;
-    //color: black;
+.header-sub {
     color: wheat;
     font-size: 25px;
 }
 
+.chat {
+    color: black;
+}
+/* -------------------------------------- */
+/* font style start
+/* -------------------------------------- */
+
+.header {
+    height: 70px;
+    width: 90%;
+    border-radius: 14px;
+//    border-bottom-right-radius: 14px;
+  //  border-bottom-left-radius: 14px;
+    position: fixed;
+    top: 10px;
+    left: 5%;
+}
+
+.header-main {
+    float: left;
+    padding: 10px 10px 10px 5%;
+}
+
+.header-sub {
+    float: right;
+    padding: 15px 10% 10px 10px;
+}
+
 .main {
-    width: 1000px;
+    max-width: 1000px;
+    margin: 70px 0px 30px 0px;
+    padding: 20px 5%;
 }
 
 .chat {
-    width: 600px;
-    float: left;
-    padding: 30px 30px 30px 45px;
-    background-color: white;
-    margin-left: 50px;
-    margin-right: 0px;
-    color: black;
-    border: 3px solid black;
+    width: 64%;
+    float: right;
+    padding: 30px 5%;
+    border-radius: 14px;
 }
 
 .get-message th {
@@ -57,40 +106,58 @@ body {
 
 .message{
     padding: 10px;
-    background-color: white;
     margin-bottom: 20px;
-    margin-left: 5px;
 }
 
 .error {
-    margin-bottom: 50px;
-}
-
-.error-message {
-    color: red;
-}
-
-.error tr {
+    margin-bottom: 30px;
     color: red;
 }
 
 .sidebar {
     height: 600px;
-    width: 180px;
-    float: right;
+    width: 15%;
+    float: left;
     padding: 20px;
-    margin-right: 5px;
-    //background-color: #D0D0D0;
-    background-color: white;
-    border: 2px solid black;
-    //color: white;
+    border-radius: 14px;
 }
 
 .chat-list {
     padding-left: 5px;
 }
 
+table {
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
 .chat-list li {
-    font-size: 20px;
-    margin-bottom: 5px;
+    list-style: none;
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 1px dotted black;
+}
+
+.btn {
+    width: 50%;
+    float: left;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+
+    .chat {
+        width: 90%;
+    }
+}
+
+@media (max-width: 942px) {
+    .sidebar h2 {
+        width: 100px;
+    }
 }

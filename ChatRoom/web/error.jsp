@@ -5,7 +5,7 @@
     List<ErrorBean> errors = (List<ErrorBean>) request.getAttribute("error");
     if(errors != null){
         %>
-        <h3 class="error-message">※入力情報が足りません</h3>
+        <h3 class="attention">※入力情報が足りません</h3>
         <table class="error">
         <%
         for (ErrorBean error: errors) {
