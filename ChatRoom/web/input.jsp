@@ -9,12 +9,12 @@
     <body>
         <div class="header border-circle">
             <div class="header-main">TRPGやろうず</div>
-            <div class="header-sub">NikoNiko掲示板</div>
+            <div class="header-sub">NikoNiko広場</div>
         </div>
         
         <div class="main">
             <div class="sidebar Bcolor-white border-circle">
-                <h2>チャット一覧</h2>
+                <h2>グループ一覧</h2>
                 <ul class="chat-list">
                     <li>xxx</li>
                     <li>yyy</li>
