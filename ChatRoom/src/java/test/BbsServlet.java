@@ -31,9 +31,15 @@ public class BbsServlet extends HttpServlet {
     protected void doPost(
                 HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //リクエストを取得
+        String name = request.getParameter("name");
+        String comment = request.getParameter("comment");
+        String chatTitle = request.getParameter("title");
+
         //アプリケーション属性のメッセージリストを取得
         ServletContext application = getServletContext();
-        List<BbsBean> messageList = (List<BbsBean>) application.getAttribute("beans");
+        List<BbsBean> messageList =
+                (List<BbsBean>) application.getAttribute(chatTitle);
         //リストがない場合、新規に作成
         if (messageList == null) {
             messageList = new ArrayList<>();
@@ -43,16 +49,11 @@ public class BbsServlet extends HttpServlet {
         BbsBean bean = new BbsBean();
         List<ErrorBean> errorList = new ArrayList<>();
 
-        //リクエストを取得
-        String name = request.getParameter("name");
-        String comment = request.getParameter("comment");
-        String dateTimeFormat = "yyyy/MM/dd HH:mm:ss";
-
         //beanに格納
         bean.setName(name);
         LocalDateTime dateTime = LocalDateTime.now();
         bean.setDateTime(dateTime.
-                format(DateTimeFormatter.ofPattern(dateTimeFormat)));
+                format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")));
         bean.setComment(comment.replaceAll("\n", "<br>"));
 
         //入力エラーがないかチェックする
@@ -64,7 +65,7 @@ public class BbsServlet extends HttpServlet {
         //あればエラーとしてレスポンス(リクエストとして)を返す
         if (errorList.isEmpty()) {
             messageList.add(bean);
-            application.setAttribute("beans", messageList);
+            application.setAttribute(chatTitle, messageList);
         } else {
             request.setAttribute("error", errorList);
         }
