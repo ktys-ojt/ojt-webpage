@@ -1,7 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="test.BbsBean, java.util.List"%>
 <%
-    List<BbsBean> beans = (List<BbsBean>) getServletContext().getAttribute("beans");
+    List<BbsBean> beans = null;
+    String chatTitle = request.getParameter("title");
+    if (chatTitle != null) {
+        beans = (List<BbsBean>) getServletContext().getAttribute(chatTitle);
+    }
+
     if(beans != null){
         int i = 0;
         for(BbsBean bean: beans){

@@ -9,7 +9,9 @@
     <body>
         <div class="header border-circle">
             <div class="header-main">TRPGやろうず</div>
-            <div class="header-sub">NikoNiko広場</div>
+            <div class="header-sub">
+                NikoNiko広場
+            </div>
         </div>
         
         <div class="main">
