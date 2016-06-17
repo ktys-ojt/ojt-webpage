@@ -33,7 +33,7 @@ public class BbsServlet extends HttpServlet {
         //アプリケーション属性のメッセージリストを取得
         ServletContext application = getServletContext();
         List<BbsBean> messageList = (List<BbsBean>) application.getAttribute("beans");
-        //まだない場合新規に作成
+        //リストがない場合、新規に作成
         if (messageList == null) {
             messageList = new ArrayList<>();
         }
@@ -56,8 +56,8 @@ public class BbsServlet extends HttpServlet {
 
         //入力エラーがないかチェックする
         //そのうちjQueryに任せる
-        errorCheck("name", name, bean, errorList);
-        errorCheck("comment", comment, bean, errorList);
+        errorCheck("name", name, errorList);
+        errorCheck("comment", comment, errorList);
 
         //エラーリストに要素がなければメッセージに格納
         //あればエラーとしてレスポンス(リクエストとして)を返す
@@ -74,7 +74,13 @@ public class BbsServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    private void errorCheck(String key, String name, BbsBean bean, List<ErrorBean> errorList) {
+    /**
+     * 入力があるかチェックする.
+     * @param key beanのどの要素かを表す.
+     * @param name 内容.
+     * @param errorList 受渡し用のリスト.リストに要素があればエラーを示す.
+     */
+    private void errorCheck(String key, String name, List<ErrorBean> errorList) {
         if (name == null || name.isEmpty()) {
             name = "未入力です。入力してください。";
             ErrorBean error = new ErrorBean();
