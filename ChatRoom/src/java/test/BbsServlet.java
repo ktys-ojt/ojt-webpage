@@ -28,7 +28,8 @@ public class BbsServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(
+                HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //アプリケーション属性のメッセージリストを取得
         ServletContext application = getServletContext();
